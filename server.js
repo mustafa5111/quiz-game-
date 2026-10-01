@@ -7,7 +7,8 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-app.use(express.static("public"));
+const path = require("path");
+app.get("/", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
 
 const rooms = new Map();
 const QUESTION_TIME = 20; // ثانية لكل سؤال
