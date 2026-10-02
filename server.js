@@ -8,8 +8,8 @@ const { Server } = require("socket.io");
 const path = require("path");
 const QUESTIONS = require("./questions");
 
-const QUESTION_TIME = 20; // ثانية لكل سؤال
-const REVEAL_TIME = 5;    // ثواني عرض الإجابة
+const QUESTION_TIME = 45; // ثانية لكل سؤال
+const REVEAL_TIME = 10;    // ثواني عرض الإجابة
 const ROOM_TTL_MS = 3 * 60 * 60 * 1000; // الغرفة تعيش 3 ساعات
 const EV_TTL_MS = 120 * 1000;           // أحداث البث تعيش دقيقتين
 
